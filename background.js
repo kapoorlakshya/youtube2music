@@ -1,12 +1,18 @@
 // Converts given YouTube link to a YouTube Music link
 function youtubeToYoutubeMusic(lnk) {
-    let youtubeMusicBase = "https://music.youtube.com/watch?v="
+    let youtubeMusicBase = "https://music.youtube.com/watch?v=";
+
+    // Extract video ID
     if (lnk.match(/youtu.be/) != null) {
         // http://youtu.be/uhY9Zxv1-oo
+        // -> uhY9Zxv1-oo
         return youtubeMusicBase + lnk.match(/youtu.be\/(.+)/)[1];
-    } else {
+    } else if (lnk.match(/youtube.com/) != null) {
         // https://www.youtube.com/watch?v=sP-IX4mdnFY#t=1m29s
+        // -> sP-IX4mdnFY
         return youtubeMusicBase + lnk.match(/v=([a-zA-Z0-9\-]+)/)[1];
+    } else {
+        alert("Unsupported link: " + lnk);
     }
 }
 
@@ -22,5 +28,13 @@ chrome.contextMenus.create({
     id: "openInYTM",
     title: "Open in YouTube Music",
     contexts: ["link"],
+    targetUrlPatterns: [
+        "https://www.youtube.com/watch?v=*",
+        "http://www.youtube.com/watch?v=*",
+        "https://youtube.com/watch?v=*",
+        "http://youtube.com/watch?v=*",
+        "http://youtu.be/*",
+        "https://youtu.be/*"
+    ],
     onclick: launchYoutubeMusic,
 });
