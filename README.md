@@ -1,4 +1,4 @@
-## YouTube to YouTube Music
+## ![Logo](https://github.com/kapoorlakshya/youtube2music/blob/master/images/icon32.png?raw=true)&nbsp;YouTube to YouTube Music
 
 Chrome extensions to open YouTube links in YouTube Music.
 
