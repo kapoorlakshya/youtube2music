@@ -6,11 +6,11 @@ function youtubeToYoutubeMusic(lnk) {
     if (lnk.match(/youtu.be/) != null) {
         // http://youtu.be/uhY9Zxv1-oo
         // -> uhY9Zxv1-oo
-        return youtubeMusicBase + lnk.match(/youtu.be\/(.+)/)[1];
+        return youtubeMusicBase + lnk.match(/youtu.be\/([a-zA-Z0-9\-_]+)/)[1];
     } else if (lnk.match(/youtube.com/) != null) {
         // https://www.youtube.com/watch?v=sP-IX4mdnFY#t=1m29s
         // -> sP-IX4mdnFY
-        return youtubeMusicBase + lnk.match(/v=([a-zA-Z0-9\-]+)/)[1];
+        return youtubeMusicBase + lnk.match(/v=([a-zA-Z0-9\-_]+)/)[1];
     } else {
         alert("Unsupported link: " + lnk);
     }
