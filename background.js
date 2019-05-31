@@ -5,9 +5,10 @@ function launchYoutubeMusic(info, tab) {
     chrome.tabs.create({
         url: ytm_lnk
     });
-};
+}
 
 chrome.contextMenus.create({
+    id: "openInYTM",
     title: "Open in YouTube Music",
     contexts: ["link"],
     onclick: launchYoutubeMusic
