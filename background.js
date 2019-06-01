@@ -1,3 +1,10 @@
+// Support Chrome, Firefox, and Edge
+window.browser = (function () {
+    return window.msBrowser ||
+        window.browser ||
+        window.chrome;
+})();
+
 // Converts given YouTube link to a YouTube Music link
 function youtubeToYoutubeMusic(lnk) {
     let youtubeMusicBase = "https://music.youtube.com/watch?v=";
@@ -18,13 +25,13 @@ function youtubeToYoutubeMusic(lnk) {
 
 // Opens YouTube Music link in a new tab
 function launchYoutubeMusic(info, tab) {
-    chrome.tabs.create({
+    browser.tabs.create({
         url: youtubeToYoutubeMusic(info.linkUrl)
     });
 }
 
 // Create context menu only for Youtube links
-chrome.contextMenus.create({
+browser.contextMenus.create({
     id: "openInYTM",
     title: "Open in YouTube Music",
     contexts: ["link"],
