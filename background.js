@@ -53,12 +53,10 @@ browser.contextMenus.create({
     title: "Open in YouTube Music",
     contexts: ["link"],
     targetUrlPatterns: [
-        "https://www.youtube.com/watch?v=*",
-        "http://www.youtube.com/watch?v=*",
-        "https://youtube.com/watch?v=*",
-        "http://youtube.com/watch?v=*",
-        "http://youtu.be/*",
-        "https://youtu.be/*"
+        "*://youtube.com/*",
+        "*://www.youtube.com/*",
+        "*://youtu.be/*",
+        "*://m.youtube.com/*"
     ],
     onclick: launchYoutubeMusic,
 });
