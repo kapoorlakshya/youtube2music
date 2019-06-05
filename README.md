@@ -1,4 +1,5 @@
 ## ![Logo](https://github.com/kapoorlakshya/youtube2music/blob/master/images/icon32.png?raw=true)&nbsp;YouTube to YouTube Music
+[![Build Status](https://travis-ci.org/kapoorlakshya/youtube2music.svg?branch=master)](https://travis-ci.org/kapoorlakshya/youtube2music)
 
 Browser extension to open YouTube links in YouTube Music. Works on Chrome, 
 Firefox, and Edge.
