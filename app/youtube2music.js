@@ -1,12 +1,5 @@
-// Support Chrome, Firefox, and Edge
-window.browser = (function () {
-    return window.msBrowser ||
-        window.browser ||
-        window.chrome;
-})();
-
 // Converts given YouTube link to a YouTube Music link
-function youtubeToYoutubeMusic(lnk) {
+youtubeToYoutubeMusic = function (lnk) {
     let youtubeMusicBase = "https://music.youtube.com/watch?v=";
     let ytmLink = '';
 
@@ -38,30 +31,4 @@ function youtubeToYoutubeMusic(lnk) {
 
     console.log("Opening YouTube Music link: " + ytmLink);
     return ytmLink;
-}
-
-// Opens YouTube Music link in a new tab
-function launchYoutubeMusic(info, tab) {
-    browser.tabs.create({
-        url: youtubeToYoutubeMusic(info.linkUrl)
-    });
-}
-
-// Create context menu only for Youtube links
-browser.contextMenus.create({
-    id: "openInYTM",
-    title: "Open in YouTube Music",
-    contexts: ["link"],
-    targetUrlPatterns: [
-        "*://youtube.com/*",
-        "*://www.youtube.com/*",
-        "*://youtu.be/*",
-        "*://m.youtube.com/*"
-    ],
-    onclick: launchYoutubeMusic,
-});
-
-function failMessage(lnk) {
-    return "Failed to open link: " + lnk + `\n\nPlease report this failure on the GitHub repo:
-        \nhttps://github.com/kapoorlakshya/youtube2music/issues\n\nThank you!`;
 }
