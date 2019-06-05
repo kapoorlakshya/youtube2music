@@ -6,9 +6,15 @@ let assert = chai.assert;
 
 describe('youtube2music', function () {
     describe('#youtubeToYoutubeMusic()', function () {
-        it("should return a YouTube Music URL", function () {
-            let lnk = "https://www.youtube.com/watch?v=sP-IX4mdnFY";
-            let expectedLink = "https://music.youtube.com/watch?v=sP-IX4mdnFY";
+        it("should convert a youtube.com URL to a music.youtube.com URL", function () {
+            let lnk = "https://youtu.be/xoFlHMG6Wfo";
+            let expectedLink = "https://music.youtube.com/watch?v=xoFlHMG6Wfo";
+            assert.equal(youtubeToYoutubeMusic(lnk), expectedLink);
+        });
+
+        it("should convert a youtu.b URL to a music.youtube.com URL", function () {
+            let lnk = "https://youtu.be/xoFlHMG6Wfo";
+            let expectedLink = "https://music.youtube.com/watch?v=xoFlHMG6Wfo";
             assert.equal(youtubeToYoutubeMusic(lnk), expectedLink);
         });
 
