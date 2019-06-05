@@ -2,3 +2,4 @@
 *.log
 *.properties
 .vscode
+node_modules
