@@ -2,7 +2,7 @@
   "name": "youtube2music",
   "version": "0.1.0",
   "description": "Browser extension to open YouTube links in YouTube Music.",
-  "main": "app/contextMenu.js",
+  "main": "src/youtube2music.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec"
   },

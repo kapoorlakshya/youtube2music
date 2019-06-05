@@ -1,6 +1,6 @@
 'use strict';
 
-require('../app/youtube2music');
+require('../src/youtube2music');
 let chai = require('chai');
 let assert = chai.assert;
 

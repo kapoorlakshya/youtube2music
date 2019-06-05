@@ -10,8 +10,8 @@
   ],
   "background": {
     "scripts": [
-      "app/youtube2music.js",
-      "app/contextMenu.js"
+      "src/youtube2music.js",
+      "src/contextMenu.js"
     ]
   },
   "icons": {
