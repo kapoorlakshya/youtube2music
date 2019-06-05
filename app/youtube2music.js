@@ -20,7 +20,8 @@ youtubeToYoutubeMusic = function (lnk) {
         ytmLink = youtubeMusicBase + lnk.match(/v(?:=|%3D)([a-zA-Z0-9\-_#?=]+(&list.+)?)/)[1];
         ytmLink = ytmLink.replace("%3D", "=");
     } else {
-        alert("Unsupported link: " + lnk);
+        alert("Unsupported link: " + lnk); // Inform user
+        throw("Unsupported link: " + lnk); // Exit
     }
 
     // Failed to capture any values from the links. Maybe the pattern changed?

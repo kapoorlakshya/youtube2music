@@ -1,0 +1,32 @@
+{
+  "name": "youtube2music",
+  "version": "0.1.0",
+  "description": "Browser extension to open YouTube links in YouTube Music.",
+  "main": "app/contextMenu.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kapoorlakshya/youtube2music.git"
+  },
+  "keywords": [
+    "youtube",
+    "youtube-music",
+    "chrome-extension",
+    "firefox-addon",
+    "edge-extension"
+  ],
+  "author": "Lakshya Kapoor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kapoorlakshya/youtube2music/issues"
+  },
+  "homepage": "https://github.com/kapoorlakshya/youtube2music#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "sinon": "^7.3.2"
+  }
+}
