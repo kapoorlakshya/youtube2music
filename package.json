@@ -4,7 +4,7 @@
   "description": "Browser extension to open YouTube links in YouTube Music.",
   "main": "src/youtube2music.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "./node_modules/.bin/mocha test"
   },
   "repository": {
     "type": "git",
