@@ -32,4 +32,4 @@ youtubeToYoutubeMusic = function (lnk) {
 
     console.log("Opening YouTube Music link: " + ytmLink);
     return ytmLink;
-}
+};
