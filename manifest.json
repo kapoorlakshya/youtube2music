@@ -1,6 +1,6 @@
 {
   "name": "YouTube to YouTube Music",
-  "description": "Chrome extensions to open YouTube links in YouTube Music.",
+  "description": "Right click on YouTube links to open them in YouTube Music.",
   "homepage_url": "https://github.com/kapoorlakshya/youtube2music",
   "version": "0.1.0",
   "author": "Lakshya Kapoor",

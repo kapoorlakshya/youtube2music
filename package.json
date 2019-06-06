@@ -1,7 +1,7 @@
 {
   "name": "youtube2music",
   "version": "0.1.0",
-  "description": "Browser extension to open YouTube links in YouTube Music.",
+  "description": "Right click on YouTube links to open them in YouTube Music.",
   "main": "src/youtube2music.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test"
