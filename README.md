@@ -14,7 +14,7 @@ Firefox, and Edge.
 
 Chrome - https://chrome.google.com/webstore/detail/youtube-to-youtube-music/cjcafjnfjeldocjljhejfemlgfogbcjk
 
-Firefox - Coming soon
+Firefox - https://addons.mozilla.org/en-US/firefox/addon/youtube-to-youtube-music/
 
 Edge - Coming soon
 
