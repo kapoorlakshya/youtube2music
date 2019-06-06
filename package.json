@@ -1,6 +1,6 @@
 {
   "name": "youtube2music",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Right click on YouTube links to open them in YouTube Music.",
   "main": "src/youtube2music.js",
   "scripts": {
