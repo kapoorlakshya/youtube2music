@@ -1,10 +1,14 @@
-## ![Logo](https://github.com/kapoorlakshya/youtube2music/blob/master/images/icon32.png?raw=true)&nbsp;YouTube to YouTube Music
+## <img alt="Logo" src="https://github.com/kapoorlakshya/youtube2music/raw/master/src/images/icon48.png?raw=true" width="32" />&nbsp;YouTube to YouTube Music
 [![Build Status](https://travis-ci.org/kapoorlakshya/youtube2music.svg?branch=master)](https://travis-ci.org/kapoorlakshya/youtube2music)
 
 Browser extension to open YouTube links in YouTube Music. Works on Chrome, 
 Firefox, and Edge.
 
-Demo - [https://kapoorlakshya.github.io/chrome-extension-to-open-youtube-links-in-youtube-music](https://kapoorlakshya.github.io/chrome-extension-to-open-youtube-links-in-youtube-music)
+<img alt="Screenshot 1" src="https://github.com/kapoorlakshya/youtube2music/raw/master/images/youtube2music_screenshot_1.png?raw=true" width="250" /> <img alt="Screenshot 2" src="https://github.com/kapoorlakshya/youtube2music/raw/master/images/youtube2music_screenshot_2.png?raw=true" width="250" /> <img alt="Screenshot 3" src="https://github.com/kapoorlakshya/youtube2music/raw/master/images/youtube2music_screenshot_3.png?raw=true" width="250" />
+
+#### See it in action
+
+[https://kapoorlakshya.github.io/chrome-extension-to-open-youtube-links-in-youtube-music](https://kapoorlakshya.github.io/chrome-extension-to-open-youtube-links-in-youtube-music)
 
 ### Installation
 
@@ -31,18 +35,12 @@ You should now see the extension in the list. See the [official guide](https://d
 
 See the [official guide](https://docs.microsoft.com/en-us/microsoft-edge/extensions/guides/adding-and-removing-extensions) for instructions.
 
-### Usage
-
-Navigate to YouTube, right click any music video, and click on **Open in YouTube Music** in the context menu.
-
-![images/context_menu.png](images/context_menu.png)
-
-Additionally, you can open all `youtube.com` or `youtu.be` links from 
-any other website. The extension enables the link in the context menu 
-(right click menu) only if the URL you clicked on has `youtube.com` or 
-`youtu.be` in it. Otherwise, the extension stays hidden.
-
-#### "This video is not available" Error
+### "This video is not available" Error
 
 Any video which is not categorized as "Music" is not available in 
 YouTube Music, and will show a "This video is not available" error.
+
+### Credits
+
+Original logo by [Rafaël Massé](https://thenounproject.com/search/?q=link&i=49479)
+ from the Noun Project.

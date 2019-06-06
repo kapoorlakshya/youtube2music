@@ -3,3 +3,4 @@
 *.properties
 .vscode
 node_modules
+pkg
