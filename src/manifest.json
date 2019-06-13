@@ -2,7 +2,7 @@
   "name": "YouTube to YouTube Music",
   "description": "Right click on YouTube links to open them in YouTube Music.",
   "homepage_url": "https://github.com/kapoorlakshya/youtube2music",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Lakshya Kapoor",
   "manifest_version": 2,
   "permissions": [
