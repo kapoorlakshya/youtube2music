@@ -28,9 +28,3 @@ browser.contextMenus.create({
     ],
     onclick: launchYoutubeMusic,
 });
-
-// Message to print when an error occurs
-function failMessage(lnk) {
-    return "Failed to open link: " + lnk + `\n\nPlease report this failure on the GitHub repo:
-        \nhttps://github.com/kapoorlakshya/youtube2music/issues\n\nThank you!`;
-}
