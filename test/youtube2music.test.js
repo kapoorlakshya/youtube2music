@@ -12,12 +12,6 @@ describe('youtube2music', function () {
             assert.equal(youtubeToYoutubeMusic(lnk), expectedLink);
         });
 
-        it("should convert a youtu.b URL to a music.youtube.com URL", function () {
-            let lnk = "https://youtu.be/xoFlHMG6Wfo";
-            let expectedLink = "https://music.youtube.com/watch?v=xoFlHMG6Wfo";
-            assert.equal(youtubeToYoutubeMusic(lnk), expectedLink);
-        });
-
         it("should include timestamp param", function () {
             let lnk = "https://www.youtube.com/watch?v=sP-IX4mdnFY#t=1m29s";
             let expectedLink = "https://music.youtube.com/watch?v=sP-IX4mdnFY#t=1m29s";
@@ -33,6 +27,18 @@ describe('youtube2music', function () {
         it("should replace %3D with =", function () {
             let lnk = "https://www.youtube.com/watch%3Fv%3DLTTt-ikVJSk";
             let expectedLink = "https://music.youtube.com/watch?v=LTTt-ikVJSk";
+            assert.equal(youtubeToYoutubeMusic(lnk), expectedLink);
+        });
+
+        it("should convert a youtu.be URL to a music.youtube.com URL", function () {
+            let lnk = "https://youtu.be/xoFlHMG6Wfo";
+            let expectedLink = "https://music.youtube.com/watch?v=xoFlHMG6Wfo";
+            assert.equal(youtubeToYoutubeMusic(lnk), expectedLink);
+        });
+
+        it("should include timestamp param in youtu.be link", function () {
+            let lnk = "https://youtu.be/hggISFswKcw?t=27";
+            let expectedLink = "https://music.youtube.com/watch?v=hggISFswKcw?t=27";
             assert.equal(youtubeToYoutubeMusic(lnk), expectedLink);
         });
     });
