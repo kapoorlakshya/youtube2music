@@ -7,7 +7,7 @@ let assert = chai.assert;
 describe('youtube2music', function () {
     describe('#youtubeToYoutubeMusic()', function () {
         it("should convert a youtube.com URL to a music.youtube.com URL", function () {
-            let lnk = "https://youtu.be/xoFlHMG6Wfo";
+            let lnk = "https://www.youtube.com/watch?v=xoFlHMG6Wfo";
             let expectedLink = "https://music.youtube.com/watch?v=xoFlHMG6Wfo";
             assert.equal(youtubeToYoutubeMusic(lnk), expectedLink);
         });
@@ -18,9 +18,15 @@ describe('youtube2music', function () {
             assert.equal(youtubeToYoutubeMusic(lnk), expectedLink);
         });
 
-        it("should include playlist param", function () {
+        it("should include list param", function () {
             let lnk = "https://www.youtube.com/watch?v=9JOu_l1dets&list=PLVL8S3lUHf0TT2SGhaJy5FREpv2rUx2i3";
             let expectedLink = "https://music.youtube.com/watch?v=9JOu_l1dets&list=PLVL8S3lUHf0TT2SGhaJy5FREpv2rUx2i3";
+            assert.equal(youtubeToYoutubeMusic(lnk), expectedLink);
+        });
+
+        it("should include playlist param", function () {
+            let lnk = "https://www.youtube.com/playlist?list=PLRXXMF3iEkmMD0u5hxqVUpUllN4lgGTHf";
+            let expectedLink = "https://music.youtube.com/playlist?list=PLRXXMF3iEkmMD0u5hxqVUpUllN4lgGTHf";
             assert.equal(youtubeToYoutubeMusic(lnk), expectedLink);
         });
 

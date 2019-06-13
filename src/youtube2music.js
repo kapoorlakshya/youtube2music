@@ -1,6 +1,6 @@
 // Converts given YouTube link to a YouTube Music link
 youtubeToYoutubeMusic = function (lnk) {
-    let youtubeMusicBase = "https://music.youtube.com/watch?v=";
+    let youtubeMusicBase = "https://music.youtube.com/";
     let ytmLink = '';
 
     // Extract video ID & other params
@@ -9,7 +9,7 @@ youtubeToYoutubeMusic = function (lnk) {
         // -> uhY9Zxv1-oo
         // https://youtu.be/hggISFswKcw?t=27
         // -> hggISFswKcw?t=27
-        ytmLink = youtubeMusicBase + lnk.match(/youtu.be\/([a-zA-Z0-9\-_?=]+)/)[1];
+        ytmLink = youtubeMusicBase + "watch?v=" + lnk.match(/youtu.be\/([a-zA-Z0-9\-_?=]+)/)[1];
     } else if (lnk.match(/youtube.com/) != null) {
         // https://www.youtube.com/watch?v=sP-IX4mdnFY#t=1m29s
         // -> sP-IX4mdnFY#t=1m29s
@@ -17,7 +17,10 @@ youtubeToYoutubeMusic = function (lnk) {
         // -> 9JOu_l1dets&list=PLVL8S3lUHf0TT2SGhaJy5FREpv2rUx2i3
         // https://www.youtube.com/attribution_link?a=ujJ0W91Plr8&u=%2Fwatch%3Fv%3DLTTt-ikVJSk%26feature%3Dshare
         // -> v%3DLTTt-ikVJSk
-        ytmLink = youtubeMusicBase + lnk.match(/v(?:=|%3D)([a-zA-Z0-9\-_#?=]+(&list.+)?)/)[1];
+        // https://www.youtube.com/playlist?list=PLRXXMF3iEkmMD0u5hxqVUpUllN4lgGTHf
+        // -> playlist?list=PLRXXMF3iEkmMD0u5hxqVUpUllN4lgGTHf
+        ytmLink = youtubeMusicBase + lnk.match(/(?:watch(:?.+)v|playlist)(?:=|%3D|\?)([a-zA-Z0-9\-_#?=]+(&list.+)?)/)[0];
+        ytmLink = ytmLink.replace("%3F", "?");
         ytmLink = ytmLink.replace("%3D", "=");
     } else {
         alert("Unsupported link: " + lnk); // Inform user
