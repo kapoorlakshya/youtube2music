@@ -20,19 +20,18 @@ youtubeToYoutubeMusic = function (lnk) {
         // https://www.youtube.com/playlist?list=PLRXXMF3iEkmMD0u5hxqVUpUllN4lgGTHf
         // -> playlist?list=PLRXXMF3iEkmMD0u5hxqVUpUllN4lgGTHf
         ytmLink = youtubeMusicBase + lnk.match(/(?:watch(:?.+)v|playlist)(?:=|%3D|\?)([a-zA-Z0-9\-_#?=]+(&list.+)?)/)[0];
-        ytmLink = ytmLink.replace("%3F", "?");
-        ytmLink = ytmLink.replace("%3D", "=");
     } else {
         alert("Unsupported link: " + lnk); // Inform user
         throw("Unsupported link: " + lnk); // Exit
     }
 
     // Failed to capture any values from the links. Maybe the pattern changed?
-    if (ytmLink === youtubeMusicBase) {
+    if (ytmLink === '' || ytmLink === youtubeMusicBase) {
         alert(failMessage(lnk)); // Inform user
         throw(failMessage(lnk)); // Exit
     }
 
+    ytmLink = decodeURIComponent((ytmLink));
     console.log("Opening YouTube Music link: " + ytmLink);
     return ytmLink;
 };
