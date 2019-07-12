@@ -16,7 +16,7 @@ Chrome - https://chrome.google.com/webstore/detail/youtube-to-youtube-music/cjca
 
 Firefox - https://addons.mozilla.org/en-US/firefox/addon/youtube-to-youtube-music/
 
-Edge - Coming soon
+Edge - See the [official guide](https://docs.microsoft.com/en-us/microsoft-edge/extensions/guides/adding-and-removing-extensions) for instructions. Microsoft Store link coming soon.
 
 ### "This video is not available" Error
 
