@@ -19,7 +19,8 @@ youtubeToYoutubeMusic = function (lnk) {
         throw(failMessage(lnk)); // Exit
     }
 
-    ytmLink = decodeURIComponent((ytmLink));
+    // Final link
+    ytmLink = decodeURIComponent(ytmLink); // Replace percent-encoding
     console.log("Opening YouTube Music link: " + ytmLink);
     return ytmLink;
 };
