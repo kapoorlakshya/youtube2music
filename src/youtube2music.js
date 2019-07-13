@@ -1,14 +1,15 @@
 // Converts given YouTube link to a YouTube Music link
 youtubeToYoutubeMusic = function (lnk) {
+    console.log("Incoming link: " + lnk);
     let youtubeMusicBase = "https://music.youtube.com/";
     let ytmLink = '';
 
     // Extract video ID & other params
-    if (lnk.match(/http(s)?:\/\/youtu\.be/) != null) {
+    if (isShortUrl(lnk)) {
         ytmLink = youtubeMusicBase + parseShortUrl(lnk);
-    } else if (lnk.match(/youtube.com/) != null) {
+    } else if (isLongUrl(lnk)) {
         ytmLink = youtubeMusicBase + parseLongUrl(lnk);
-    } else { // Edge case - Somehow a non-youtube URL makes it.
+    } else {
         alert("Unsupported link: " + lnk); // Inform user
         throw("Unsupported link: " + lnk); // Exit
     }
@@ -24,6 +25,16 @@ youtubeToYoutubeMusic = function (lnk) {
     console.log("Opening YouTube Music link: " + ytmLink);
     return ytmLink;
 };
+
+// Returns true if using short URL (youtu.be)
+function isShortUrl(lnk) {
+    return lnk.match(/http(s)?:\/\/youtu\.be/) != null;
+}
+
+// Returns true if using long URL (youtube.com)
+function isLongUrl(lnk) {
+    return lnk.match(/youtube.com/) != null;
+}
 
 // Returns video ID and other params from the given short URL (youtu.be).
 //
