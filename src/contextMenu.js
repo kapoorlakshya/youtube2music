@@ -8,9 +8,18 @@ window.browser = (function () {
 
 // Opens YouTube Music link in a new tab
 function launchYoutubeMusic(info) {
+    let srcLink = '';
+
+    // Issue 7 - Allow opening currently open video.
+    if (info.pageUrl.match(/youtube.com\/watch\?v=/) != null) {
+        srcLink = info.pageUrl; // Current URL
+    } else {
+        srcLink = info.linkUrl; // Link you right click on
+    }
+
     // noinspection JSUnresolvedVariable,JSUnresolvedVariable
     browser.tabs.create({
-        url: youtubeToYoutubeMusic(info.linkUrl)
+        url: youtubeToYoutubeMusic(srcLink)
     });
 }
 
@@ -19,7 +28,11 @@ function launchYoutubeMusic(info) {
 browser.contextMenus.create({
     id: "openInYTM",
     title: "Open in YouTube Music",
-    contexts: ["link"],
+    contexts: ["page", "link"],
+    documentUrlPatterns: [
+        "*://youtube.com/*",
+        "*://www.youtube.com/*"
+    ],
     targetUrlPatterns: [
         "*://youtube.com/*",
         "*://www.youtube.com/*",
