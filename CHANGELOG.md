@@ -1,4 +1,20 @@
-### 0.2.0 (TBD)
+### 0.5.0 (TBD)
+
+* Display context menu option for currently open video URL (issue [#7](https://github.com/kapoorlakshya/youtube2music/issues/7)).
+
+### 0.4.0 (2019-07-11)
+
+* Fix bug where the extension icon was displayed in grayscale instead of color (issue #6).
+* Code quality improvements.
+
+**Note:** This should have been a patch release (`0.3.1`) because no 
+new features were added.
+
+### 0.3.0 (2019-06-13)
+
+* Add support for `youtube.com/playlist` links (issue [#5](https://github.com/kapoorlakshya/youtube2music/issues/5)).
+
+### 0.2.0 (2019-06-06)
 
 * Add support for Firefox and Edge.
 * Add support for timestamp (`t=27`) and playlist (`list=`) values in the URL.

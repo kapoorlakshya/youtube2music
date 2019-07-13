@@ -6,6 +6,13 @@ Firefox, and Edge.
 
 <img alt="Screenshot 1" src="https://github.com/kapoorlakshya/youtube2music/raw/master/images/youtube2music_screenshot_1.png?raw=true" width="250" /> <img alt="Screenshot 2" src="https://github.com/kapoorlakshya/youtube2music/raw/master/images/youtube2music_screenshot_2.png?raw=true" width="250" /> <img alt="Screenshot 3" src="https://github.com/kapoorlakshya/youtube2music/raw/master/images/youtube2music_screenshot_3.png?raw=true" width="250" />
 
+### Usage
+
+Simply right click a `youtube.com` or a `youtu.be` link and click the 
+"**YouTube to YouTube Music**" option to open the link in YouTube Music.
+You can also right click anywhere on a currently open YouTube video page
+to use the context menu option.
+
 #### See it in action
 
 [https://kapoorlakshya.github.io/chrome-extension-to-open-youtube-links-in-youtube-music](https://kapoorlakshya.github.io/chrome-extension-to-open-youtube-links-in-youtube-music)
@@ -21,7 +28,7 @@ Edge - See the [official guide](https://docs.microsoft.com/en-us/microsoft-edge/
 ### "This video is not available" Error
 
 Any video which is not categorized as "Music" is not available in 
-YouTube Music, and will show a "This video is not available" error.
+YouTube Music, and will show a "*This video is not available*" error.
 
 ### Bugs
 
