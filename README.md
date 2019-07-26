@@ -11,7 +11,7 @@ Firefox, and Edge.
 Simply right click a `youtube.com` or a `youtu.be` link and click the 
 "**YouTube to YouTube Music**" option to open the link in YouTube Music.
 You can also right click anywhere on a currently open YouTube video page
-to use the context menu option.
+(outside of the video player) to use the context menu option.
 
 #### See it in action
 

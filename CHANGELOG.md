@@ -1,4 +1,4 @@
-### 0.5.0 (TBD)
+### 0.5.0 (2019-07-26)
 
 * Display context menu option for currently open video URL (issue [#7](https://github.com/kapoorlakshya/youtube2music/issues/7)).
 
